@@ -2,7 +2,7 @@
 
 
 
-with this docker image contains Filebeat and a [Python script][RS] that generate random apache script every 5 seconds in a log file and send it to Logstash (ELK STACK) through Filebeat.
+This docker image contains Filebeat and a [Python script][RS] that generate random apache script every 5 seconds in a log file and send it to Logstash (ELK STACK) through Filebeat.
 Pull the image:
 ```
 docker pull iostream82/apache-randomlog-fbeats
