@@ -1,4 +1,4 @@
-# apache-randomlog-fbeats
+# apache-randomlog-fbeat
 
 
 
@@ -10,11 +10,11 @@ docker pull iostream82/apache-randomlog-fbeats
 
 To run container inside the same host of ELK container:
 ```
-docker docker run -d --network host  iostream82/apache-randomlog-fbeats
+docker docker run -d --network host  iostream82/apache-randomlog-fbeat
 ```
 To run container outside the  host of ELK container:
 ```
-docker docker run -d -e ELK_HOST=someIP  iostream82/apache-randomlog-fbeats
+docker docker run -d -e ELK_HOST=someIP  iostream82/apache-randomlog-fbeat
 ```
 for specify a tag for Filebeat use ``` -e NODE_NAME=sometags ``` 
 
