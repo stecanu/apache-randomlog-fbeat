@@ -1,0 +1,45 @@
+apiVersion: v2
+kind: Service
+metadata:
+  name: elk-standalone
+  labels:
+    run: elk-standalone
+spec:
+  type: NodePort
+  ports:
+  - port: 5601
+    targetPort: 5601
+    protocol: TCP
+    name: kibana
+  - port: 9200
+    targetPort: 9200
+    protocol: TCP
+    name: elasticsearch
+  - port: 5044
+    targetPort: 5045
+    protocol: TCP
+    name: logstash
+  selector:
+    run: elk-standalone
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: elk-standalone
+spec:
+  selector:
+    matchLabels:
+      app: elk-standalone
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: elk-standalone
+    spec:
+      containers:
+      - name: elk
+        image: sebp/elk
+        ports:
+        - containerPort: 5601
+        - containerPort: 9200
+        - containerPort: 5044
