@@ -18,9 +18,10 @@ To run container outside the  host of ELK container:
 ```
 for specify a tag for Filebeat use ``` -e NODE_NAME=sometags ``` 
 
-for running ELK standalone container please refer to [elk-docker]
+for running ELK standalone container please refer to [elk-docker-apache-log]
 
    [RS]: <https://github.com/kiritbasu/Fake-Apache-Log-Generator>
    [elk-docker]: <https://elk-docker.readthedocs.io/>
+   [elk-docker-apache-log]: <https://github.com/stecanu/elk-docker-apache-log>
   
 
